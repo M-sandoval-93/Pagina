@@ -1,0 +1,101 @@
+/* Archivo de estilos css */
+/* Reseteo de página */ 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 1);
+}
+
+.contenedor {
+    width: 90%;
+    min-width: 400px;
+    max-width: 1720px;
+    overflow: hidden;
+    margin: auto;
+}
+
+header .logo {
+    color: #fff;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 150px;
+    float: left;
+}
+
+header nav {
+    line-height: 150px;
+    float: right;
+}
+
+header nav #btn-menu {
+    display: none;
+}
+
+header nav label {
+    display: none;
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 4px;
+}
+
+header nav label:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+}
+
+header nav a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px; 
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+header nav a:hover {
+    background: rgba(240, 123, 34, 0.5);
+}
+
+/* versión responsiva */
+@media screen and (max-width: 1100px) {
+    header .logo,
+    header nav{
+        width: 100%;
+        text-align: center;
+        line-height: 100px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header nav a{
+        display: none;
+    }
+
+    header .logo {
+        font-size: 30px;
+        width: 70%;
+    }
+
+    header nav {
+        width: 20%;
+    }
+
+    header nav label {
+        display: inline-block;
+    }
+}
+

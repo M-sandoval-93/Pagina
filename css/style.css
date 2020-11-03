@@ -1,1 +1,94 @@
-/* Archivo de estilos css */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+nav {
+    background: rgba(0, 0, 0, 1);
+    height: 100px;
+}
+
+.logo {
+    color: rgba(255, 255, 255, 1);
+    font-size: 40px;
+    line-height: 100px;
+    padding: 0px 60px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 100px;
+}
+
+nav ul li a {
+    color: rgba(255, 255, 255, 1);
+    padding: 10px 20px;    
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    transition: all 500ms ease;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.contenedor-menu{
+    float: right; 
+    line-height: 100px;
+    margin-right: 40px;
+    display: none;
+}
+
+.menu {
+    padding: 5px;
+    display: inline-block;
+    line-height: normal;
+    cursor: pointer;
+}
+
+#btn-menu {
+    display: none;
+}
+
+@media screen and (max-width: 1045px) {
+    .contenedor-menu {
+        display: block;
+    }
+    
+    ul {
+        position: fixed;
+        width: 50%;
+        background: orange;
+        top: 100px;
+        left: -50%;
+        text-align: center;
+        transition: all 500ms ease;
+    }
+
+    nav ul li {
+        display: block
+    }
+
+    nav ul li a:hover, .active {
+        background: none;
+        color: rgba(0, 0, 0, 1);
+    }
+
+      #btn-menu:checked ~ ul {
+        left: 0;
+    }
+
+}
