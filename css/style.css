@@ -6,89 +6,112 @@
 
 nav {
     background: rgba(0, 0, 0, 1);
-    height: 100px;
+    height: 120px;
 }
 
-.logo {
-    color: rgba(255, 255, 255, 1);
-    font-size: 40px;
-    line-height: 100px;
-    padding: 0px 60px;
+.marca {
+    color: rgb(255, 255, 255);
     font-weight: bold;
+    font-size: 2em;
+    padding: 0px 50px;
+    line-height: 110px;
+}
+
+.mi-marca {
+    font-size: 2.2em;
+}
+
+.mi-marca:hover {
+    text-shadow: 2px 2px 4px white;
+    color: rgb(0, 0, 0);
 }
 
 nav ul {
     float: right;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 nav ul li {
     display: inline-block;
-    line-height: 100px;
+    line-height: 110px;
 }
 
 nav ul li a {
-    color: rgba(255, 255, 255, 1);
-    padding: 10px 20px;    
+    color: rgb(255, 255, 255);
     text-decoration: none;
+    padding: 10px 20px;
     font-size: 20px;
-    text-transform: uppercase;
-    border-radius: 20px;
+    transform: uppercase;
+    border-radius: 15px;
     transition: all 500ms ease;
 }
 
 nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
-.active {
-    background: rgba(255, 255, 255, 0.2);
+.logo {
+    padding-right: 10px;
 }
 
-.contenedor-menu{
-    float: right; 
-    line-height: 100px;
+#menu {
+    display: none;
+}
+
+.click {
+    font-size: 40px;
+    float: right;
+    line-height: 120px;
     margin-right: 40px;
     display: none;
 }
 
-.menu {
-    padding: 5px;
+.click label {
     display: inline-block;
+    width: 35px;
+    height: 40px;
     line-height: normal;
+    color: rgb(255, 255, 255);
     cursor: pointer;
 }
 
-#btn-menu {
-    display: none;
-}
-
-@media screen and (max-width: 1045px) {
-    .contenedor-menu {
+@media all and (max-width: 1040px) {
+    .click {
         display: block;
     }
-    
-    ul {
+
+    nav ul {
         position: fixed;
-        width: 50%;
-        background: orange;
-        top: 100px;
-        left: -50%;
+        background: rgba(0, 0, 0, 0.5);
+        width: 30%;
+        top: 120px;
+        left: -100%;
         text-align: center;
         transition: all 500ms ease;
     }
 
     nav ul li {
-        display: block
+        display: block;
+        line-height: 60px;
+        border-bottom: 1px solid black;
+        transition: all 500ms ease;
     }
 
-    nav ul li a:hover, .active {
+    nav ul li a {
+        display: inline-block;
+        width: 100%;
+    }
+
+    nav ul li:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    nav ul li a:hover {
         background: none;
-        color: rgba(0, 0, 0, 1);
     }
 
-      #btn-menu:checked ~ ul {
+    #menu:checked ~ ul {
         left: 0;
     }
-
 }
